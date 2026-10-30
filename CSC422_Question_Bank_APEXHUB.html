@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CSC 422 — Likely Exam Questions | APEXHUB</title>
+<style>
+:root{--bg:#faf9f6;--bg2:#fff;--text:#1a1d1f;--text2:#52585e;--line:#e3e0d8;--accent:#8a4b2e;--accent2:#2e5e4e;--code:#f1efe8;--tag-src:#8a4b2e;--tag-plain:#2e5e4e;--tag-ex:#4a5b8c;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15161a;--bg2:#1c1e23;--text:#e9e7e0;--text2:#a9adb3;--line:#33363d;--accent:#e0a071;--accent2:#7fc9ab;--code:#22242a;--tag-src:#e0a071;--tag-plain:#7fc9ab;--tag-ex:#9db4f5}}
+:root[data-theme="dark"]{--bg:#15161a;--bg2:#1c1e23;--text:#e9e7e0;--text2:#a9adb3;--line:#33363d;--accent:#e0a071;--accent2:#7fc9ab;--code:#22242a;--tag-src:#e0a071;--tag-plain:#7fc9ab;--tag-ex:#9db4f5}
+html{scroll-padding-top:110px;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,'Iowan Old Style',serif;line-height:1.6;overflow-x:hidden}
+header{position:sticky;top:0;z-index:50;background:var(--bg2);border-bottom:1px solid var(--line);padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px}
+.hdr-row{display:flex;align-items:center;gap:10px;max-width:980px;margin:0 auto;font-family:Arial,sans-serif}
+.brand{font-weight:800;font-size:15px;white-space:nowrap}.brand span{color:var(--accent)}
+#search{flex:1;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);font-size:16px;font-family:Arial,sans-serif}
+#theme-btn{border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:6px;padding:8px 10px;cursor:pointer}
+nav.topics{display:flex;gap:6px;overflow-x:auto;max-width:980px;margin:8px auto 0;font-family:Arial,sans-serif;font-size:12.5px;padding-bottom:2px}
+nav.topics a{white-space:nowrap;color:var(--text2);text-decoration:none;padding:5px 9px;border-radius:14px;border:1px solid var(--line)}
+nav.topics a:hover{color:var(--accent);border-color:var(--accent)}
+main{max-width:760px;margin:0 auto;padding:20px 16px 80px}
+h1.title{font-family:Arial,sans-serif;font-size:26px;margin:6px 0 2px}
+p.lecturer-credit{font-family:Arial,sans-serif;font-size:13.5px;font-weight:700;color:var(--accent);margin:0 0 6px}
+p.sub{font-family:Arial,sans-serif;color:var(--text2);font-size:14px;margin:0 0 14px}
+.tag{display:inline-block;font-family:Arial,sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:4px;margin-bottom:4px}
+.tag.src{background:color-mix(in srgb,var(--tag-src) 18%,transparent);color:var(--tag-src)}
+.tag.plain{background:color-mix(in srgb,var(--tag-plain) 18%,transparent);color:var(--tag-plain)}
+.tag.ex{background:color-mix(in srgb,var(--tag-ex) 18%,transparent);color:var(--tag-ex)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 6px;font-family:Arial,sans-serif}
+.filters button{border:1px solid var(--line);background:var(--bg);color:var(--text2);border-radius:6px;padding:7px 12px;font-size:13px;cursor:pointer}
+.filters button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+#count{font-family:Arial,sans-serif;font-size:12.5px;color:var(--text2);margin:6px 0 0}
+.topic{border-top:3px solid var(--accent);padding-top:6px;margin-top:44px}
+.topic h2{font-family:Arial,sans-serif;font-size:21px;margin:2px 0 4px}
+.topic .ref{font-family:Arial,sans-serif;font-size:12px;color:var(--text2);margin:0 0 12px}
+.likely-q{border:1px solid var(--line);border-left:4px solid var(--accent2);border-radius:8px;margin-bottom:10px;background:var(--bg2);padding:10px 14px;font-family:Arial,sans-serif;display:flex;gap:10px;align-items:flex-start}
+.likely-q .n{font-weight:800;color:var(--accent);min-width:26px;font-size:14px;padding-top:2px}
+.likely-q .qtext{font-family:Georgia,serif;font-size:15.5px;margin:0;font-weight:700;overflow-wrap:anywhere}
+.likely-q .body{flex:1;min-width:0}
+.hidden{display:none !important}
+.top-link{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:16px;background:var(--accent);color:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+footer{max-width:760px;margin:40px auto 60px;padding:16px;font-family:Arial,sans-serif;font-size:12.5px;color:var(--text2);border-top:1px solid var(--line)}
+mark{background:color-mix(in srgb,var(--accent) 35%,transparent);border-radius:2px}
+@media(max-width:600px){.hdr-row{flex-wrap:wrap}.brand{width:100%}h1.title{font-size:22px}.likely-q{padding:10px}.likely-q .qtext{font-size:15px}}
+.parts{margin-top:6px}.part{margin:8px 0}.part.sub{margin:6px 0}.subs{margin:4px 0 0 14px;padding-left:10px;border-left:2px solid var(--line)}
+.ph{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:baseline;font-family:Georgia,serif;font-size:15px}.pl{font-family:Arial,sans-serif;font-weight:800;color:var(--accent);min-width:24px}.pt{flex:1 1 200px;min-width:0;overflow-wrap:anywhere}
+.abtn,#toggleAll,#tsel{border:1px solid var(--line);background:var(--bg);color:var(--text2);border-radius:6px;padding:6px 10px;font-size:12.5px;cursor:pointer;font-family:Arial,sans-serif}
+#tsel{max-width:100%;font-size:16px}
+.ans{margin:6px 0 2px;padding:8px 12px;border-left:3px solid var(--tag-plain);background:var(--code);border-radius:0 6px 6px 0;font-size:14.5px;overflow-wrap:anywhere}
+.likely-q .qtext{font-size:16.5px}
+</style>
+</head>
+<body>
+<header>
+<div class="hdr-row"><div class="brand">APEXHUB <span>/ CSC 422 · Questions</span></div>
+<input id="search" type="search" placeholder="Search: DMA, cache, Flynn, TMR..." aria-label="Search questions"><button id="theme-btn" aria-label="Toggle theme">◐</button></div>
+<nav class="topics" id="topic-nav"></nav>
+</header>
+<main>
+<h1 class="title">Likely Exam Questions &amp; Answers</h1>
+<p class="lecturer-credit">CSC 422 — Computer Architecture / Organization &nbsp;·&nbsp; Lecturer: Mr Ayegbusi O.A.</p>
+<p class="sub">Exam-style questions with parts (a), (b), (c) and sub-parts (i), (ii), (iii), each with a model answer taken from the lecture notes and study guide. Attempt first, then tap Show answer. These are practice questions, not confirmed past-exam questions.</p>
+<div class="filters" id="filters">
+<button class="active" data-f="all">All</button>
+<button data-f="T">Theory</button>
+<button data-f="C">Calculation</button>
+<button data-f="D">Draw / Diagram</button>
+<button data-f="X">Compare / Differentiate</button>
+<button id="toggleAll">Show all answers</button>
+</div>
+<div class="filters"><select id="tsel" aria-label="Filter by topic"><option value="all">All topics</option></select></div>
+<div id="count"></div>
+<div id="root"></div>
+</main>
+<button class="top-link" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<footer>APEXHUB Question Bank · CSC 422 Computer Architecture / Organization · Lecturer: Mr Ayegbusi O.A. · Built from the lecturer's handwritten notes. The notes remain the authority.</footer>
+<script>
+(function(){
+var TY={T:['Theory','src'],C:['Calculation','ex'],D:['Draw','plain'],X:['Compare','plain']};
+var DATA=[
+{id:'memory',t:'Memory System & Hierarchy',ref:'Study guide §1',q:[
+['T','Memory classification and RAM',[
+['a','Define computer memory and list its four classifications.','Any physical component used to temporarily or permanently store data, information or instructions. Classes: primary, secondary, cache and register memory.'],
+['b','Primary memory:',null,[['i','Name its two types.','RAM and ROM.'],['ii','Why is RAM volatile, and why does the CPU relate with it?','Its contents are lost when power fails or the computer is turned off. The CPU accesses RAM directly.'],['iii','Name the two types of RAM.','Dynamic RAM (DRAM) and Static RAM (SRAM).']]]]],
+['X','DRAM and SRAM',[
+['a','Describe the DRAM cell.','Each cell stores 1 bit using a transistor and a capacitor. They are tiny, so millions fit on one chip and a DRAM chip stores more than an SRAM chip of the same size.'],
+['b','Differentiate DRAM from SRAM in terms of:',null,[['i','Refresh','DRAM needs continuous refreshing; SRAM does not.'],['ii','Speed','DRAM is slower; SRAM is faster.'],['iii','Cost','DRAM is cheaper; SRAM is expensive.'],['iv','Power','DRAM uses less power; SRAM uses more.'],['v','Capacity','DRAM holds a large amount of data; SRAM holds less.']]],
+['c','What happens to SRAM data on power loss? Mention its life span.','Data is kept only while power is supplied and is lost in an outage. SRAM has a longer life.']]],
+['T','Read Only Memory',[
+['a','Define ROM. Why are boot instructions kept in it?','Memory that stores data permanently on a chip; it can only be read, not written or modified. It is non-volatile, so boot instructions survive power loss.'],
+['b','What is firmware?','Software stored in ROM that controls the processor and generates signals. (The notebook says RAM, but ROM is the correct place.)'],
+['c','List the five types of ROM.','Masked ROM, PROM, EPROM, EEPROM, Flash ROM.'],
+['d','Differentiate between:',null,[['i','EPROM and EEPROM','EPROM is erased with strong UV light after removal from the circuit. EEPROM is erased electrically (high-voltage charge) with no UV or removal.'],['ii','Masked ROM and PROM','Masked ROM is programmed by the manufacturer at production and cannot be altered. PROM is blank; the user writes it once with a PROM burner, then it is permanent.']]],
+['e','Describe Flash ROM.','Non-volatile chip written in small chunks called sectors or blocks; data survives power loss.']]],
+['T','Registers, cache and secondary memory',[
+['a','What are registers?','Tiny, very fast memory inside the CPU, typically 16–64 bits. Smallest capacity, fastest access.'],
+['b','Cache memory:',null,[['i','Define it.','Compact fast memory near the CPU holding frequently used data and instructions recently fetched from main memory; it cuts retrieval time.'],['ii','Describe L1, L2 and L3.','L1: fastest, closest to the core, smallest. L2: bigger than L1, slower than L1, faster than L3. L3: largest and slowest, shared among cores.']]],
+['c','What is secondary memory?','Storage devices such as hard disks and flash drives that store large amounts of programs and data permanently.']]],
+['D','Memory hierarchy',[
+['a','Define memory hierarchy.','An organised arrangement of memory units by speed, cost and size that balances speed, capacity and cost for efficient processing.'],
+['b','Draw and label the pyramid.','Top to bottom: Register, Cache, Main Memory, Hard Disk, External Memory. Side arrows: speed and cost increase upward; size increases downward.'],
+['c','State the trend from register to main memory.','Size increases; speed and cost decrease.']]]]},
+{id:'addressing',t:'Word & Byte Addressable Memory',ref:'Study guide §2',q:[
+['T','Addressing basics',[
+['a','What is a memory address?','A binary number placed on the address bus by the CPU to locate and access data in a read or write operation.'],
+['b','Differentiate byte addressable from word addressable memory.','Byte: each address holds exactly one byte, so a byte is read by its address. Word: each address holds a whole word; the CPU fetches the word, isolates its address, then extracts the byte.'],
+['c','Name three architectures that use byte addressing. Differentiate RISC from CISC.','x86, ARM, RISC-V. RISC is simpler and faster; CISC is more complex.']]],
+['C','Total memory size',[
+['a','2¹⁰ addresses, word addressable, 32-bit words.','32 bits = 4 bytes. 1024 × 4 = 4096 bytes = 4 KB.'],
+['b','2¹⁰ addresses, byte addressable.','1024 × 1 = 1024 bytes = 1 KB.'],
+['c','2¹⁶ addresses, word addressable, 16-bit words.','2 bytes per word. 65536 × 2 = 131072 bytes = 128 KB.']]],
+['C','Address bits required',[
+['a','4096 bytes, byte addressable.','log₂4096 = log₂2¹² = 12 bits.'],
+['b','64 KB, byte addressable.','64 KB = 2¹⁶ bytes, so 16 bits.'],
+['c','32 KB, word addressable, 32-bit words.','Word = 4 bytes. 32 × 1024 = 32768; 32768 ÷ 4 = 8192 words = 2¹³, so 13 bits.']]]]},
+{id:'cache',t:'Cache Memory Mapping',ref:'Study guide §3',q:[
+['T','Direct mapping',[
+['a','What is cache mapping? List the three techniques.','It decides how main-memory data is placed in cache; good mapping cuts access time. Techniques: direct, full associative, set associative.'],
+['b','Direct mapping:',null,[['i','State its characteristics.','Each memory block maps to exactly one cache line, found by a modulo operation. Address = Tag, Index, Offset.'],['ii','Role of tag, index and offset.','Index selects the cache line; tag verifies the stored data is the right one; offset picks the exact data in the block.'],['iii','Advantages and disadvantages.','+ Easy to implement, low cost. − More cache misses when blocks share a line; limited flexibility.']]]]],
+['T','Associative mappings',[
+['a','Full associative mapping:',null,[['i','Explain it.','Any block can go in any cache line. Address = Tag + Offset; the tag is compared against all cache tags.'],['ii','Advantages and disadvantages.','+ Fewer conflict misses, better utilisation. − Complex search, costly hardware, higher power.']]],
+['b','Set associative mapping:',null,[['i','Explain it.','Cache is divided into sets of several lines; a block goes into any line of its set. Address = Tag, Set Index, Offset.'],['ii','Why is it a compromise?','It reduces conflict misses compared with direct mapping, at lower complexity than full associative.']]],
+['c','Compare the three techniques.','Direct: simplest, cheapest, most conflicts. Full: most flexible, most complex, highest power. Set: balance of both; cost rises with associativity.']]],
+['C','Direct-mapping line and bits',[
+['a','A cache has 16 lines; block 21 is loaded. Which line?','21 mod 16 = 5.'],
+['b','8-line cache: which blocks map to line 0?','n mod 8 = 0, so blocks 0, 8, 16, …'],
+['c','64 words, block of 4 words, 8 lines. Find total, offset, index and tag bits.','Total = log₂64 = 6. Offset = log₂4 = 2. Index = log₂8 = 3. Tag = 6 − 3 − 2 = 1.'],
+['d','24-bit address, 8-byte block, 512 lines. Find tag, index, offset.','Offset 3, index 9, tag 24 − 12 = 12.']]],
+['C','Address-field splitting',[
+['a','128 words, 8 words per line, full associative. Find offset, address bits and tag.','Offset log₂8 = 3; address bits log₂128 = 7; tag 7 − 3 = 4.'],
+['b','16-bit address, 16-byte block, 256 lines.','Offset 4, index 8, tag 16 − 12 = 4.']]],
+['C','Cache line of an address',[
+['','32-bit system, direct-mapped, 1024 lines, 32-byte block, address 0x0001A3F4. Find:',null,[['a','Offset bits','log₂32 = 5.'],['b','Index bits and tag bits','Index log₂1024 = 10; tag 32 − 10 − 5 = 17.'],['c','Cache line (decimal)','(0x0001A3F4 ÷ 32) mod 1024 = 3359 mod 1024 = 287.'],['d','Line in binary and hex','287 = 0100011111₂ = 0x11F.']]]]]]},
+{id:'virtual',t:'Virtual Memory',ref:'Study guide §4',q:[
+['T','Virtual memory concepts',[
+['a','Define virtual memory.','A memory management technique giving applications the illusion of a large contiguous memory even when physical RAM is limited and fragmented; it separates virtual from physical addresses.'],
+['b','Explain:',null,[['i','Paging','Virtual memory is split into fixed-size pages; physical memory into matching frames. Unused pages move to the hard drive area called swap space.'],['ii','Page table','An OS data structure that tracks which virtual page maps to which physical frame.'],['iii','Demand paging','Only the needed parts of a program are loaded into RAM, so many processes can reside in memory.']]],
+['c','State two advantages.','Supports multiprogramming and larger programs; isolates each process in its own virtual address space for security.']]],
+['T','Limitations',[
+['a','What is thrashing?','When RAM is exhausted the system spends more time swapping pages between RAM and hard drive than executing instructions, so performance drops.'],
+['b','What is a page fault? How is it handled?','Access to a virtual page that is on disk. The OS pauses the process, fetches the page into a free physical frame, and updates the table.']]]]},
+{id:'control',t:'Control Unit',ref:'Study guide §5',q:[
+['T','Control unit types',[
+['a','What is the control unit? Name its two types.','The CPU component that directs processor operation by generating control signals. Types: hardwired and microprogrammed.'],
+['b','Hardwired control unit:',null,[['i','Explain how it works.','Fixed logic circuits (gate decoders and flip-flops) generate signals; fast, used mainly in RISC.'],['ii','Drawbacks.','Changing the instruction set means rewiring, so it is hard to modify; design grows complex as the instruction set grows.'],['iii','Draw and label it.','Instruction register → opcode bits → instruction decoder → INS 1…n → control signal generator; step counter (with counter enable and clock) → T1…Tn; conditional signals and external inputs feed the generator.']]],
+['c','What does the instruction register store?','The instruction the CPU is to execute.']]],
+['X','Microprogrammed control',[
+['a','Explain microprogrammed control.','Control signals come from a sequence of micro-instructions stored in control memory (control store). It is easy to design and flexible to modify.'],
+['b','Define:',null,[['i','Control word','A word whose bits represent the control signals for one step.'],['ii','Micro-routine','A sequence of control words for one instruction.'],['iii','Micro-instruction and control store','Each control word is a micro-instruction; the special memory holding all of them is the control store.']]],
+['c','Differentiate hardwired from microprogrammed.','Hardwired: faster, hardware-generated, hard to modify, complex for large sets. Microprogrammed: slower, stored in control store, flexible, easy to design.']]]]},
+{id:'transfer',t:'Data Transfer, Buses & I/O',ref:'Study guide §6',q:[
+['T','Buses',[
+['a','Define data transfer and a bus.','Data transfer is movement of data between registers, memory, I/O devices and the CPU, done through buses. A bus is a set of communication lines carrying information.'],
+['b','Differentiate the three buses.','Data bus: carries actual data, bi-directional, width sets data moved at once. Address bus: carries memory addresses, usually one-way from the CPU. Control bus: carries read, write, interrupt, acknowledge and clock signals.']]],
+['T','Programmed and interrupt I/O',[
+['a','Name the three I/O transfer techniques.','Programmed I/O, interrupt-initiated I/O, Direct Memory Access.'],
+['b','Programmed I/O:',null,[['i','Explain it.','The CPU controls all I/O: it starts the transfer and repeatedly checks the device status flag until ready, then moves data to its register and memory.'],['ii','Advantages and disadvantages.','+ Easy, minimal hardware, cheap. − Busy waiting wastes CPU cycles and blocks other work.']]],
+['c','Interrupt I/O:',null,[['i','Explain it.','No polling: the CPU runs other tasks until the device sends an interrupt; the interrupt service routine runs, then the CPU resumes the interrupted task.'],['ii','Advantages and disadvantages.','+ Frees CPU time, faster response. − More complex hardware and software.']]]]],
+['D','Direct Memory Access',[
+['a','What is DMA and the DMAC?','I/O devices transfer data directly to or from memory, bypassing the CPU. The DMAC takes control of the buses, routes data between device and RAM, then interrupts the CPU when done.'],
+['b','Explain the three DMA modes.','Burst: DMAC takes the bus and moves the whole block; CPU stops until done. Cycle stealing: one byte or word per cycle, then bus returns to CPU. Transparent: transfers only when the CPU is idle.'],
+['c','Draw the DMA diagram.','CPU, Memory and DMAC share address, data and control buses. DMAC connects to the I/O device (I/O data, I/O control). BR (Bus Request) goes from DMAC to CPU; BG (Bus Grant) comes back.']]]]},
+{id:'fault',t:'Fault Tolerance',ref:'Study guide §7',q:[
+['T','Fault tolerance techniques',[
+['a','Define fault tolerance and name its two categories.','Design that lets a system keep working when one or more devices fail. Categories: hardware and software.'],
+['b','Hardware techniques:',null,[['i','Triple Modular Redundancy','Three copies of a module run at once and a vote picks the majority result; it can track only one fault at a time.'],['ii','Information redundancy','Extra bits (e.g. parity bits) added to detect and correct errors.']]],
+['c','Software techniques:',null,[['i','N-version programming','Independent teams write versions from the same requirements using different algorithms; all run together and a decision algorithm takes the majority output.'],['ii','Exception handling','Detects an abnormal event and redirects execution to stop errors spreading.']]],
+['d','Give four applications.','Aviation, medical systems, space exploration, industrial automation.']]]]},
+{id:'parallel',t:'Parallelism & Flynn\'s Taxonomy',ref:'Study guide §8',q:[
+['T','Parallelism',[
+['a','Define parallelism and differentiate it from concurrency.','Performing multiple operations simultaneously for speed. Concurrency handles many tasks by rapidly switching; parallelism runs them at the exact same time.'],
+['b','Explain the four types.','Bit-level: larger word size, more bits at once. Task-level: split a task into sub-tasks run together. Data-level: same operation on many data items (graphics, vector). Instruction-level: several instructions executed at once.'],
+['c','Techniques for instruction-level parallelism.','Pipelining: overlap execution of independent instructions. Superscalar: several instructions per clock cycle using multiple ALUs.']]],
+['X','Flynn\'s taxonomy',[
+['a','Who introduced it, when, and what does it classify?','Michael J. Flynn, 1966; classifies architectures by how processors handle instruction and data streams.'],
+['b','Explain each class:',null,[['i','SISD','Uniprocessor; one instruction on one data stream, sequential.'],['ii','SIMD','Same instruction on many data streams; suits matrix, image and scientific work.'],['iii','MISD','Different instructions on the same data; few built, none commercial, not useful today.'],['iv','MIMD','Multiple instructions on multiple data streams; suits any application.']]],
+['c','Draw the four diagrams.','SISD: instruction pool and data pool to one processor. SIMD: one instruction pool to several processors, each with its own data. MISD: one data pool shared by several processors with separate instructions. MIMD: several processing units each with own instructions and data.']]],
+['T','Memory models & multi-core',[
+['a','Compare shared and distributed memory.','Shared: processors use the same memory; low latency, simple programming; poor scalability. Distributed: each node has own memory, no global address space, uses message passing; highly scalable; desynchronisation.'],
+['b','What is the hybrid model?','Clusters of shared-memory nodes networked in a distributed structure, combining speed and scalability.'],
+['c','Multi-core processing:',null,[['i','Define it.','A single chip with multiple processing cores.'],['ii','Benefits and examples.','Higher performance, lower power, better multitasking. Dual-, quad-, hexa-, octa-, deca-core.']]]]]]},
+{id:'harvard',t:'Harvard Architecture',ref:'Study guide §9',q:[
+['T','Harvard architecture',[
+['a','Define it and state the problem it solves.','Design with separate memory and buses for instructions and data, so both are fetched simultaneously. It overcomes the Von Neumann bottleneck.'],
+['b','List its components and draw it.','CPU, instruction (program) memory, data memory, instruction bus, data bus. Diagram: control unit with ALU and I/O, linked by an instruction bus to instruction memory and a data bus to data memory.'],
+['c','State its advantages.','Faster execution; no Von Neumann bottleneck; efficient pipelining; higher bandwidth; protects program memory from accidental modification.'],
+['d','State its disadvantages.','More costly and complex; hard to write programs that modify their own code.'],
+['e','Give applications and examples.','Microcontrollers, DSPs, embedded systems, robotics, automotive control, medical equipment. Examples: STM32, Atmel AVR, Microchip PIC.']]],
+['X','Harvard vs Von Neumann',[
+['','Compare them in a table.','Harvard: separate instruction and data memory; separate buses; simultaneous access; faster; more complex. Von Neumann: shared memory; single bus; sequential access; slower; simpler.']]]]},
+{id:'systolic',t:'Systolic Array',ref:'Study guide §10',q:[
+['T','Systolic array basics',[
+['a','Define it and explain the name.','Processors arranged to rhythmically compute and pass data on; each does a small computation and hands the result to neighbours. Named after rhythmic blood flow through the heart.'],
+['b','List its components and roles.','Processing elements (ALU, registers, control logic, local memory); input channels feed first rows or columns; output channels collect results; communication links join neighbours; the clock synchronises all.'],
+['c','Differentiate the types.','Linear: PEs in a line (signal filtering). Two-dimensional: rows and columns, most common (matrix multiplication, neural networks, image processing). Multi-dimensional: data pumped in several directions with local reuse.']]],
+['T','Characteristics and uses',[
+['a','State five characteristics.','Scalable, pipelined, highly parallel, local communication, high throughput.'],
+['b','Advantages and drawbacks.','+ High parallelism, regular modular design, robust, compact, efficient. − Specialised and inflexible; expensive.'],
+['c','Name areas of application.','Matrix multiplication, DSP (FFT), image and video processing, cryptography, scientific computing, deep-learning accelerators and Google\'s TPUs.']]]]},
+{id:'assign',t:'Assignment Topics',ref:'Due on or before the exam. Not in the lecture notes, so answers are general knowledge',q:[
+['T','Assignment topics',[
+['a','Parallel computing languages.','Languages or extensions for expressing parallelism, e.g. OpenMP and MPI (with C/C++/Fortran), CUDA, OpenCL, Java threads.'],
+['b','Semiconductor memory.','Memory built from integrated circuits: RAM (static, dynamic) and ROM types; fast and compact.'],
+['c','Magnetic recording.','Data stored as magnetised regions on a moving magnetic surface; a head writes and reads them (disks, tapes).'],
+['d','Charge-coupled devices.','Cells hold charge packets that are shifted along the chip and read out serially; used in image sensors and serial storage.'],
+['e','Magnetic bubble memory.','Tiny magnetic domains (bubbles) in a thin film circulate under a rotating field; presence or absence of a bubble encodes a bit.']]]]}
+];
+var root=document.getElementById('root'),nav=document.getElementById('topic-nav'),cnt=document.getElementById('count'),sel=document.getElementById('tsel'),total=0,qn=0;
+function mk(p,sub){var d=document.createElement('div');d.className='part'+(sub?' sub':'');
+ var h=document.createElement('div');h.className='ph';h.innerHTML='<span class="pl"></span><span class="pt"></span>';
+ h.firstChild.textContent=p[0]?'('+p[0]+')':'';h.lastChild.textContent=p[1];d.appendChild(h);
+ if(p[2]){var b=document.createElement('button');b.className='abtn';b.textContent='Show answer';
+  var a=document.createElement('div');a.className='ans hidden';a.textContent=p[2];
+  b.onclick=function(){var s=a.classList.toggle('hidden');b.textContent=s?'Show answer':'Hide answer'};
+  h.appendChild(b);d.appendChild(a);}
+ if(p[3]){var w=document.createElement('div');w.className='subs';p[3].forEach(function(x){w.appendChild(mk(x,1))});d.appendChild(w);}
+ return d;}
+DATA.forEach(function(d,i){
+ var s=document.createElement('section');s.className='topic';s.id=d.id;
+ s.innerHTML='<h2>'+(i+1)+'. '+d.t+'</h2><p class="ref">'+d.ref+' · '+d.q.length+' questions</p>';
+ d.q.forEach(function(q){total++;qn++;var e=document.createElement('div');e.className='likely-q';e.dataset.t=q[0];
+  e.innerHTML='<div class="n">Q'+qn+'</div><div class="body"><span class="tag '+TY[q[0]][1]+'">'+TY[q[0]][0]+'</span><p class="qtext"></p><div class="parts"></div></div>';
+  e.querySelector('.qtext').textContent=q[1];var pw=e.querySelector('.parts');q[2].forEach(function(p){pw.appendChild(mk(p))});s.appendChild(e);});
+ root.appendChild(s);
+ var a=document.createElement('a');a.href='#'+d.id;a.textContent=d.t.split(' & ')[0].split(',')[0];nav.appendChild(a);
+ var o=document.createElement('option');o.value=d.id;o.textContent=(i+1)+'. '+d.t;sel.appendChild(o);
+});
+var f='all',qs='',tp='all';
+function upd(){var shown=0;
+ document.querySelectorAll('.topic').forEach(function(sec){var any=0;
+  sec.querySelectorAll('.likely-q').forEach(function(e){var ok=(f==='all'||e.dataset.t===f)&&(tp==='all'||sec.id===tp)&&(qs.length<2||(e.textContent+' '+(e.querySelector('.ans')?'':'')+Array.prototype.map.call(e.querySelectorAll('.ans'),function(x){return x.textContent}).join(' ')).toLowerCase().indexOf(qs)>-1);
+   e.classList.toggle('hidden',!ok);if(ok){any++;shown++}});
+  sec.classList.toggle('hidden',!any);});
+ cnt.textContent='Showing '+shown+' of '+total+' questions';}
+document.getElementById('filters').addEventListener('click',function(ev){var b=ev.target.closest('button[data-f]');if(!b)return;
+ f=b.dataset.f;this.querySelectorAll('button[data-f]').forEach(function(x){x.classList.toggle('active',x===b)});upd();});
+sel.addEventListener('change',function(){tp=this.value;upd();});
+var allOn=false;document.getElementById('toggleAll').onclick=function(){allOn=!allOn;this.textContent=allOn?'Hide all answers':'Show all answers';
+ document.querySelectorAll('.ans').forEach(function(a){a.classList.toggle('hidden',!allOn)});document.querySelectorAll('.abtn').forEach(function(b){b.textContent=allOn?'Hide answer':'Show answer'});};
+document.getElementById('search').addEventListener('input',function(){qs=this.value.trim().toLowerCase();upd();});
+upd();
+var root_=document.documentElement,tb=document.getElementById('theme-btn');
+function ap(t){if(t)root_.setAttribute('data-theme',t);else root_.removeAttribute('data-theme')}
+try{ap(localStorage.getItem('apexhub-theme'))}catch(e){}
+tb.addEventListener('click',function(){var c=root_.getAttribute('data-theme');
+ var n=c==='dark'?'light':(c==='light'?null:(matchMedia('(prefers-color-scheme: dark)').matches?'light':'dark'));
+ ap(n);try{localStorage.setItem('apexhub-theme',n||'')}catch(e){}});
+})();
+</script>
+</body>
+</html>
